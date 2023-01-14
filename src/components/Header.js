@@ -29,7 +29,7 @@ const Header = () => {
             to={"/"}
             className="text-[#696c6d] hover:text-primary transition"
           >
-            Home
+            Homee
           </Link>
           {/* About Link */}
           <Link
