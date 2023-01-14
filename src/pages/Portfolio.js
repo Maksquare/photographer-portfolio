@@ -1,8 +1,12 @@
 // import image assets
-import Image1 from "../img/portfolio/1.png";
-import Image2 from "../img/portfolio/2.png";
-import Image3 from "../img/portfolio/3.png";
-import Image4 from "../img/portfolio/4.png";
+import Image1 from "../img/portfolio/aziz/1.jpg";
+import Image2 from "../img/portfolio/aziz/2.jpg";
+import Image3 from "../img/portfolio/aziz/3.jpg";
+import Image4 from "../img/portfolio/aziz/4.jpg";
+import Image5 from "../img/portfolio/aziz/5.jpg";
+import Image6 from "../img/portfolio/aziz/6.jpg";
+import Image7 from "../img/portfolio/aziz/7.jpg";
+import Image8 from "../img/portfolio/aziz/8.jpg";
 // import Link from react-router-dom
 import { Link } from "react-router-dom";
 // import framer motion
@@ -14,7 +18,7 @@ import { CursorContext } from "../context/CursorContext";
 // import cursor context
 
 const Portfolio = () => {
-  const { onMouseLeave, onMouseEnter } = useContext(CursorContext)
+  const { onMouseLeave, onMouseEnter } = useContext(CursorContext);
   return (
     <motion.section
       initial={{ opacity: 0, y: "100%" }}
@@ -36,17 +40,21 @@ const Portfolio = () => {
             onMouseLeave={onMouseLeave}
             className="flex flex-col lg:items-start "
           >
-            <h1 className="h1">Portfolio</h1>
+            <h1 className="h1 text-accent_secondary">Portfolio</h1>
             <p className="mb-12 max-w-sm">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
-              praesentium
-              <b>veniam molestiae repudiandae quaerat saepe rerum,</b>
-              alias. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Saepe, odio.
-              <br />
-              <br />
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
-              temporibus corrupti cumque beatae repudiandae velit.
+              I am a <b> wildlife photographer </b>with over 10 years of
+              experience capturing the natural beauty of animals in their
+              habitats. I have a passion for photographing all types of
+              wildlife, from the smallest creatures to the largest mammals, and
+              enjoy working in difficult and remote locations.{" "}
+              <b> My photographs </b> have been featured in national magazines
+              and online publications, and I have won numerous awards for my
+              work.
+              <b>
+                I am a highly skilled photographer with a great eye for detail,{" "}
+              </b>
+              and I am confident that my skills will translate well to a career
+              in wildlife photography.
             </p>
             <Link className="btn mb-[30px] mx-auto lg:mx-0" to={"/contact"}>
               Hire me
@@ -56,7 +64,8 @@ const Portfolio = () => {
           <div
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            className="grid grid-cols-2 lg:gap-2">
+            className="grid grid-cols-4  lg:gap-2"
+          >
             {/* image */}
             <div
               className="max-w-[250px] lg:max-w-[320px]
@@ -95,6 +104,46 @@ const Portfolio = () => {
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
                 src={Image4}
+                alt=""
+              />
+            </div>
+            <div
+              className="max-w-[250px] lg:max-w-[320px]
+            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            >
+              <img
+                className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
+                src={Image5}
+                alt=""
+              />
+            </div>
+            <div
+              className="max-w-[250px] lg:max-w-[320px]
+            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            >
+              <img
+                className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
+                src={Image6}
+                alt=""
+              />
+            </div>
+            <div
+              className="max-w-[250px] lg:max-w-[320px]
+            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            >
+              <img
+                className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
+                src={Image7}
+                alt=""
+              />
+            </div>
+            <div
+              className="max-w-[250px] lg:max-w-[320px]
+            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            >
+              <img
+                className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
+                src={Image8}
                 alt=""
               />
             </div>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 // import image assets
 import WomanImg from "../img/contact/woman.png";
+import Aziz from "../img/contact/aziz_tr.png";
 import { motion } from "framer-motion";
 // import local transition values
 import { transition1 } from "../transitions";
@@ -23,7 +24,7 @@ const Contact = () => {
             className="hidden lg:flex bg-[#eef7f9] absolute bottom-0 left-0 right-0 top-72 -z-10 "></motion.div>
           {/* text and form*/}
           <div className="lg:flex-1 lg:pt:32 px-4">
-            <h1 className="h1">Contact me</h1>
+            <h1 className="h1">Contact  <span className="text-accent_secondary">me</span></h1>
             <p className="mb-12"> I would love to get suggestions from you</p>
             {/* Form */}
             <form className=" flex flex-col gap-y-4">
@@ -63,8 +64,8 @@ const Contact = () => {
            animate={{ opacity: 1, y: 0 }}
            exit={{ opacity: 0, y: "100%" }}
            transition={{transition:transition1, duration:1.5}}
-          className="lg:flex-1">
-            <img src={WomanImg} alt="" />
+           className="lg:flex-1">
+            <img src={Aziz} alt="" />
           </motion.div>
         </div>
       </div>

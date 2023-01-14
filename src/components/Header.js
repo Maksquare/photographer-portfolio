@@ -1,6 +1,6 @@
 // Import Components
 import Socials from "../components/Socials";
-import Logo from "../img/header/logo.svg";
+import Logo from "../img/header/aziz_logo.svg";
 import MobileNav from "../components/MobileNav";
 // Import Link from react-router-dom
 import { Link } from "react-router-dom";
@@ -16,20 +16,20 @@ const Header = () => {
         <Link
           onMouseLeave={onMouseLeave}
           onMouseEnter={onMouseEnter}
-          to={"/"} className='max-w-[200px]'>
-          <img src={Logo} alt="" />
+          to={"/"} className='max-w-[130px]'>
+          <img width={'250px'} src={Logo} alt="" />
         </Link>
         {/* Nav initially hidden - shown on desktop screen */}
         <nav
           onMouseLeave={onMouseLeave}
           onMouseEnter={onMouseEnter}
-          className="hidden xl:flex gap-x-12 font-semibold">
+          className="hidden xl:flex gap-x-12 font-semibold ">
           {/* Home Link */}
           <Link
             to={"/"}
             className="text-[#696c6d] hover:text-primary transition"
           >
-            Homee
+            Home
           </Link>
           {/* About Link */}
           <Link
