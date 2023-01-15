@@ -16,7 +16,7 @@ const Header = () => {
         <Link
           onMouseLeave={onMouseLeave}
           onMouseEnter={onMouseEnter}
-          to={"/"} className='max-w-[130px]'>
+          to={"/"} className='max-w-[110px]'>
           <img width={'250px'} src={Logo} alt="" />
         </Link>
         {/* Nav initially hidden - shown on desktop screen */}

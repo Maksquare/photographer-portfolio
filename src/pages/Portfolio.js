@@ -14,8 +14,10 @@ import { motion } from "framer-motion";
 // import local transition values
 import { transition1 } from "../transitions";
 import { useContext } from "react";
-import { CursorContext } from "../context/CursorContext";
 // import cursor context
+import { CursorContext } from "../context/CursorContext";
+// import react helmet
+import {Helmet} from 'react-helmet'
 
 const Portfolio = () => {
   const { onMouseLeave, onMouseEnter } = useContext(CursorContext);
@@ -25,8 +27,14 @@ const Portfolio = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: "100%" }}
       transition={transition1}
-      className="section"
+      className="section lg:overflow-hidden"
     >
+      {/* Meta Tag */}
+      <Helmet>
+        <title>
+          Portfolio
+        </title>
+      </Helmet>
       {/* image and text container */}
       <div className="container mx-auto h-full relative">
         <div className="flex flex-col lg:flex-row h-full items-center justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb:8">
@@ -64,12 +72,12 @@ const Portfolio = () => {
           <div
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            className="grid grid-cols-4  lg:gap-2"
+            className="grid grid-cols-2 gap-2  lg:gap-2 sm:grid-cols-4"
           >
             {/* image */}
             <div
               className="max-w-[250px] lg:max-w-[320px]
-            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            h-[187px] lg:h-[220px] bg-orange-50 overflow-hidden"
             >
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
@@ -79,7 +87,7 @@ const Portfolio = () => {
             </div>
             <div
               className="max-w-[250px] lg:max-w-[320px]
-            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            h-[187px] lg:h-[220px] bg-orange-50 overflow-hidden"
             >
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
@@ -89,7 +97,7 @@ const Portfolio = () => {
             </div>
             <div
               className="max-w-[250px] lg:max-w-[320px]
-            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            h-[187px] lg:h-[220px] bg-orange-50 overflow-hidden"
             >
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
@@ -99,7 +107,7 @@ const Portfolio = () => {
             </div>
             <div
               className="max-w-[250px] lg:max-w-[320px]
-            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            h-[187px] lg:h-[220px] bg-orange-50 overflow-hidden"
             >
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
@@ -109,7 +117,7 @@ const Portfolio = () => {
             </div>
             <div
               className="max-w-[250px] lg:max-w-[320px]
-            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            h-[187px] lg:h-[220px] bg-orange-50 overflow-hidden"
             >
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
@@ -119,7 +127,7 @@ const Portfolio = () => {
             </div>
             <div
               className="max-w-[250px] lg:max-w-[320px]
-            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            h-[187px] lg:h-[220px] bg-orange-50 overflow-hidden"
             >
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
@@ -129,7 +137,7 @@ const Portfolio = () => {
             </div>
             <div
               className="max-w-[250px] lg:max-w-[320px]
-            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            h-[187px] lg:h-[220px] bg-orange-50 overflow-hidden"
             >
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
@@ -139,7 +147,7 @@ const Portfolio = () => {
             </div>
             <div
               className="max-w-[250px] lg:max-w-[320px]
-            h-[187px] lg:h-[220px] bg-accent overflow-hidden"
+            h-[187px] lg:h-[220px] bg-orange-50 overflow-hidden"
             >
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"

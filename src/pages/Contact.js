@@ -5,6 +5,7 @@ import Aziz from "../img/contact/aziz_tr.png";
 import { motion } from "framer-motion";
 // import local transition values
 import { transition1 } from "../transitions";
+import { Helmet } from "react-helmet";
 const Contact = () => {
   return (
     <motion.section
@@ -13,6 +14,11 @@ const Contact = () => {
       exit={{ opacity: 0, y: "100%" }}
       transition={transition1}
       className="section bg-white">
+        <Helmet>
+        <title>
+          Contact
+        </title>
+      </Helmet>
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row h-full items-center justify-start pt-36 gap-x-8 text-center lg:text-left">
           {/* background */}
@@ -21,7 +27,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "100%" }}
             transition={transition1}
-            className="hidden lg:flex bg-[#eef7f9] absolute bottom-0 left-0 right-0 top-72 -z-10 "></motion.div>
+            className="hidden lg:flex bg-orange-50 absolute bottom-0 left-0 right-0 top-72 -z-10 "></motion.div>
           {/* text and form*/}
           <div className="lg:flex-1 lg:pt:32 px-4">
             <h1 className="h1">Contact  <span className="text-accent_secondary">me</span></h1>
@@ -53,18 +59,18 @@ const Contact = () => {
                 type="text"
                 placeholder="Your message"
               />
-              <button className="btn mb-[30px] mx-auto lg:mx-0 self-start">
+              <button className="btn mb-[10px] mx-auto lg:mx-0 self-start">
                 Send
               </button>
             </form>
           </div>
           {/* image */}
-          <motion.div 
-           initial={{ opacity: 0, y: "100%" }}
-           animate={{ opacity: 1, y: 0 }}
-           exit={{ opacity: 0, y: "100%" }}
-           transition={{transition:transition1, duration:1.5}}
-           className="lg:flex-1">
+          <motion.div
+            initial={{ opacity: 0, y: "100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "100%" }}
+            transition={{ transition: transition1, duration: 1.5 }}
+            className="lg:flex-1 sm:mt-[-300px]  md:mt-[-300px] lg:mt-0">
             <img src={Aziz} alt="" />
           </motion.div>
         </div>

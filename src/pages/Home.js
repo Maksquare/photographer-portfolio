@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "../context/CursorContext";
-// import local transition
+
+// import react Helmet
+import { Helmet } from "react-helmet";
 const Home = () => {
   const { onMouseLeave, onMouseEnter } = useContext(CursorContext);
   const transition1 = {
@@ -20,9 +22,14 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={transition1}
-      className="section"
+      className="section overflow-hidden"
     >
-      <div className="container mx-auto h-full relative">
+      <Helmet>
+        <title>
+          Home
+        </title>
+      </Helmet>
+      <div className="container mx-auto h-full relative ">
         {/* text and image Container */}
         <div className=" flex flex-col justify-center">
           {/* text */}
@@ -35,14 +42,14 @@ const Home = () => {
             onMouseLeave={onMouseLeave}
             className="w-full pt-36 pb-14 lg:pt-0 lg:pb-0 lg:w-auto z-10 lg:absolute flex flex-col justify-center items-center lg:items-start"
           >
-            <h1 className="h1">
+            <h1 className="h1 text-center lg:text-left  ">
               Wildlife <br /> <span className="text-accent_secondary"> Photographer </span>
               {/* photographer <br /> & film Maker */}
             </h1>
             <p className="text-[26px] lg:text-[36px] mb-4 lg:mb-12">
               Addis Ababa, Ethiopia
             </p>
-            <Link to={"/contact"} className="btn mb-[30px]">
+            <Link to={"/contact"} className="btn mb-[30px] ">
               Hire me
             </Link>
           </motion.div>
@@ -62,6 +69,7 @@ const Home = () => {
                 transition={transition1}
                 src={BgImg}
                 alt=""
+                className=""
               />
             </motion.div>
           </div>
