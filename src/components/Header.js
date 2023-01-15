@@ -4,15 +4,25 @@ import Logo from "../img/header/aziz_logo.svg";
 import MobileNav from "../components/MobileNav";
 // Import Link from react-router-dom
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CursorContext } from "../context/CursorContext";
 // Import cursor context
 
 const Header = () => {
   const { onMouseLeave, onMouseEnter } = useContext(CursorContext)
+  const [navBg,setNavBg] = useState(false)
+  
+  
+    window.addEventListener('scroll', ()=>{
+      setNavBg(true)
+      console.log(navBg)
+    })
+ 
+  
   return (
-    <header className="fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center ">
+    <header className={ ` ${navBg? 'xsm:bg-white sm:bg-transparent lg:bg-transparent':''} fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center `}>
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
+        
         <Link
           onMouseLeave={onMouseLeave}
           onMouseEnter={onMouseEnter}
