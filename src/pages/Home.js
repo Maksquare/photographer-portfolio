@@ -11,7 +11,7 @@ import Tilt from "react-parallax-tilt";
 const Home = () => {
   const { onMouseLeave, onMouseEnter } = useContext(CursorContext);
   const containerRef = useRef(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
 
   // Scroll parallax
   const { scrollYProgress } = useScroll({
@@ -30,7 +30,7 @@ const Home = () => {
   const imgParallaxX = useTransform(smoothX, [-1, 1], ["-18px", "18px"]);
   const imgParallaxY = useTransform(smoothY, [-1, 1], ["-12px", "12px"]);
   const textParallaxX = useTransform(smoothX, [-1, 1], ["8px", "-8px"]);
-  const textParallaxY = useTransform(smoothY, [-1, 1], ["5px", "-5px"]);
+
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -41,7 +41,7 @@ const Home = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  }, [mouseX, mouseY]);
 
   const transition1 = { duration: 1.6, ease: [0.6, 0.01, -0.05, 0.9] };
   const stagger = { duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] };
