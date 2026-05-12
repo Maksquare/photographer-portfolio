@@ -5,7 +5,7 @@ import AnimRoutes from "./components/AnimRoutes";
 //Import Browser Router
 
 import { useContext } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 // Import Framer motion
 import { motion } from "framer-motion";
 import { CursorContext } from "./context/CursorContext";
