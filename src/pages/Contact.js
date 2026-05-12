@@ -29,7 +29,7 @@ const Contact = () => {
   const { onMouseEnter, onMouseLeave } = useContext(CursorContext);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
-  const [focused, setFocused] = useState(null);
+
 
   const handleChange = (e) =>
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
