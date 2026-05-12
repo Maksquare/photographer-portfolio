@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext, useRef } from 'react';
+import React, { useContext, useState } from 'react';
 
 export const CursorContext = createContext();
 
